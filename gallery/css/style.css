@@ -1,0 +1,23 @@
+.container{
+	text-align:center;
+	height:50%;
+}
+.mainTitle{
+	font-size:56px;
+}
+div>p{
+	margin-left:25%;
+	text-align:left;
+}
+.leftMenu{
+	border-right: 1px solid #99ddff;
+	float:left;
+	height:500px;
+	position:relative;
+	margin: 20px;
+	padding-right: 50px;
+	padding-top: 30px;
+}
+.mainContainer{
+	position:relative;
+}
