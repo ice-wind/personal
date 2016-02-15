@@ -1,13 +1,29 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora/Lora-Italic.ttf);
+}
+
 .container{
 	text-align:center;
 	height:50%;
+	
 }
 .mainTitle{
 	font-size:56px;
+	font-family: Ubuntu;
+	color:#084d6e;
+}
+.fa-camera-retro{
+	color:#28769e;
 }
 div>p{
 	margin-left:25%;
 	text-align:left;
+	font-family: Lora;
 }
 .leftMenu{
 	border-right: 1px solid #99ddff;
@@ -17,7 +33,45 @@ div>p{
 	margin: 20px;
 	padding-right: 50px;
 	padding-top: 30px;
+	font-size: 20px;
+	color:#000;
+}
+.category{
+	font-size:25px;
+	color:#db5d00;
 }
 .mainContainer{
 	position:relative;
+}
+/*--------------------BUTTON----------------------------*/
+.button{
+	border: 3px solid #99ddff;
+	position: fixed;
+	width: 45px;
+	height: 25px;
+	text-align: center;
+	color: #4c85a2;
+	opacity: 0.4;
+	border-radius:5px;
+	cursor:pointer;
+	
+	transition: all 0.5s ease; 
+    -webkit-transition: all 0.5s ease; 
+}
+.button:hover{
+	background-color:#99ddff;
+	color:#fff;
+	opacity:1;
+}
+.btnToBack{
+	top:5px;
+	right:5px;
+}
+.btnToTop{
+	bottom: 5px;
+	right: 5px;
+}
+/*------------------------------------------------------*/
+hr{
+	color:#99ddff;
 }
