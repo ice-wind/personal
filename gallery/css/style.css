@@ -16,32 +16,42 @@
 	font-size:56px;
 	font-family: Ubuntu;
 	color:#084d6e;
+	padding:40px;
+}
+.secondTitle{
+	padding:40px;
+	margin-left:-150px;
 }
 .fa-camera-retro{
 	color:#28769e;
 }
-div>p{
-	margin-left:25%;
-	text-align:left;
-	font-family: Lora;
-}
 .leftMenu{
 	border-right: 1px solid #99ddff;
-	float:left;
-	height:500px;
-	position:relative;
+	height:250px;
+	width:160px;
+	position:fixed;
 	margin: 20px;
 	padding-right: 50px;
-	padding-top: 30px;
 	font-size: 20px;
 	color:#000;
+}
+.leftMenuLine{
+	height:5px;
+	width:95%;
+	border-top:1px solid #99ddff;
+	position:relative;
+	padding-bottom:10px;
+	opacity:0;
+
 }
 .category{
 	font-size:25px;
 	color:#db5d00;
+	cursor:pointer;
 }
 .mainContainer{
 	position:relative;
+	margin-left: 260px;
 }
 /*--------------------BUTTON----------------------------*/
 .button{
@@ -73,5 +83,17 @@ div>p{
 }
 /*------------------------------------------------------*/
 hr{
+	color:#99ddff;
+}
+.lora{
+	font-family: Lora;
+	font-size:20px;
+}
+div>p{
+	margin-left:25%;
+	text-align:left;
+	font-family: Lora;
+}
+.lightBlue{
 	color:#99ddff;
 }
