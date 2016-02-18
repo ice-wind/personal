@@ -19,15 +19,15 @@
 }
 .secondTitle{
 	padding:40px;
-	margin-left:-150px;
+	margin-left:-190px;
 }
 .fa-camera-retro{
-	color:#28769e;
+	color:#013c5d;
 }
 .leftMenu{
 	border-right: 1px solid #99ddff;
 	height:250px;
-	width:180px;
+	width:160px;
 	position:fixed;
 	padding-right: 30px;
 	font-size: 20px;
@@ -47,9 +47,13 @@
 
 }
 .category{
-	font-size:18px;
-	color:#000;
+	font-size:19px;
+	color:#db5d00;
 	cursor:pointer;
+}
+.subCategory{
+	font-family: Lora;
+	text-decoration:underline;
 }
 .categorySection{
 	margin-bottom: 50px;
@@ -83,12 +87,12 @@
 }
 /*--------------------BUTTON----------------------------*/
 .button{
-	border: 3px solid #99ddff;
+	border: 2px solid #01448f;
 	position: fixed;
 	width: 45px;
 	height: 25px;
 	text-align: center;
-	color: #4c85a2;
+	color: #0b2d54;
 	opacity: 0.4;
 	border-radius:5px;
 	cursor:pointer;
@@ -97,7 +101,8 @@
     -webkit-transition: all 0.5s ease; 
 }
 .button:hover{
-	background-color:#99ddff;
+	background-color:#fc9e58;
+	border: 2px solid #fc9e58;
 	color:#fff;
 	opacity:1;
 }
@@ -105,15 +110,33 @@
 	top:5px;
 	right:5px;
 }
+.btnToBack>img{
+	width:45%;
+}
+.btnback path {
+	fill:black;
+}
 .btnToTop{
 	bottom: 5px;
 	right: 5px;
 	display:none;
 }
+.btnToTop>img{
+	width:80%;
+}
+#btnback{
+	stroke:red;
+	 -webkit-filter: contrast(5);
+  filter: contrast(5);
+}
+#btnback{
+	stroke:red;
+}
+
 /*-----------------------ADDED CLASSES------------------*/
 .shiftToTop{
 	position:fixed;
-	top:35px;
+	top:20%;
 }
 /*------------------------------------------------------*/
 hr{

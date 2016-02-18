@@ -13,7 +13,7 @@ $(document).ready(function(){
 		 $('.leftMenu').addClass('shiftToTop');
       } else {
          $('.btnToTop').fadeOut();
-		 $('.leftMenuLine').animate({opacity:0},100);
+		 $('.leftMenuLine').animate({opacity:0},30);
 		  $('.leftMenu').removeClass('shiftToTop');
       }
    });
@@ -30,4 +30,6 @@ $(document).ready(function(){
 		return false;
 	});
    
+  
+    $(".path1").attr("stroke","red");
 });
