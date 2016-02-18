@@ -10,7 +10,6 @@
 .container{
 	text-align:center;
 	height:50%;
-	
 }
 .mainTitle{
 	font-size:56px;
@@ -28,12 +27,15 @@
 .leftMenu{
 	border-right: 1px solid #99ddff;
 	height:250px;
-	width:160px;
+	width:180px;
 	position:fixed;
-	margin: 20px;
-	padding-right: 50px;
+	padding-right: 30px;
 	font-size: 20px;
 	color:#000;
+	top:300px;
+	
+	-webkit-transition-property: top;
+    -webkit-transition-duration: 1.5s; 
 }
 .leftMenuLine{
 	height:5px;
@@ -45,9 +47,35 @@
 
 }
 .category{
-	font-size:25px;
-	color:#db5d00;
+	font-size:18px;
+	color:#000;
 	cursor:pointer;
+}
+.categorySection{
+	margin-bottom: 50px;
+}
+.categorySection::after{
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 1px;
+	background-color:#db5d00;
+	visibility: hidden;
+	
+	 -webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s; 
+}
+.categorySection:hover{
+	color:#db5d00;
+}
+.categorySection:hover:after{
+	visibility: visible;
+	color:#db5d00;
+	
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
 .mainContainer{
 	position:relative;
@@ -80,6 +108,12 @@
 .btnToTop{
 	bottom: 5px;
 	right: 5px;
+	display:none;
+}
+/*-----------------------ADDED CLASSES------------------*/
+.shiftToTop{
+	position:fixed;
+	top:35px;
 }
 /*------------------------------------------------------*/
 hr{
@@ -90,7 +124,7 @@ hr{
 	font-size:20px;
 }
 div>p{
-	margin-left:25%;
+	margin-left:5%;
 	text-align:left;
 	font-family: Lora;
 }

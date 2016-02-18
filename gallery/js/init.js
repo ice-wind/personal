@@ -10,9 +10,11 @@ $(document).ready(function(){
       if ($(this).scrollTop() > 120) {
          $('.btnToTop').fadeIn();
 		 $('.leftMenuLine').animate({opacity:1},200);
+		 $('.leftMenu').addClass('shiftToTop');
       } else {
          $('.btnToTop').fadeOut();
 		 $('.leftMenuLine').animate({opacity:0},100);
+		  $('.leftMenu').removeClass('shiftToTop');
       }
    });
 /*---------------scroll to selected section---------------*/
