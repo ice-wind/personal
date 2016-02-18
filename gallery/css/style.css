@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora/Lora-Italic.ttf);
+}
+
+.container{
+	text-align:center;
+	height:50%;
+}
+.mainTitle{
+	font-size:56px;
+	font-family: Ubuntu;
+	color:#084d6e;
+	padding:40px;
+}
+.secondTitle{
+	padding:40px;
+	margin-left:-150px;
+}
+.fa-camera-retro{
+	color:#28769e;
+}
+.leftMenu{
+	border-right: 1px solid #99ddff;
+	height:250px;
+	width:180px;
+	position:fixed;
+	padding-right: 30px;
+	font-size: 20px;
+	color:#000;
+	top:300px;
+	
+	-webkit-transition-property: top;
+    -webkit-transition-duration: 1.5s; 
+}
+.leftMenuLine{
+	height:5px;
+	width:95%;
+	border-top:1px solid #99ddff;
+	position:relative;
+	padding-bottom:10px;
+	opacity:0;
+
+}
+.category{
+	font-size:18px;
+	color:#000;
+	cursor:pointer;
+}
+.categorySection{
+	margin-bottom: 50px;
+}
+.categorySection::after{
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 1px;
+	background-color:#db5d00;
+	visibility: hidden;
+	
+	 -webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s; 
+}
+.categorySection:hover{
+	color:#db5d00;
+}
+.categorySection:hover:after{
+	visibility: visible;
+	color:#db5d00;
+	
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.mainContainer{
+	position:relative;
+	margin-left: 260px;
+}
+/*--------------------BUTTON----------------------------*/
+.button{
+	border: 3px solid #99ddff;
+	position: fixed;
+	width: 45px;
+	height: 25px;
+	text-align: center;
+	color: #4c85a2;
+	opacity: 0.4;
+	border-radius:5px;
+	cursor:pointer;
+	
+	transition: all 0.5s ease; 
+    -webkit-transition: all 0.5s ease; 
+}
+.button:hover{
+	background-color:#99ddff;
+	color:#fff;
+	opacity:1;
+}
+.btnToBack{
+	top:5px;
+	right:5px;
+}
+.btnToTop{
+	bottom: 5px;
+	right: 5px;
+	display:none;
+}
+/*-----------------------ADDED CLASSES------------------*/
+.shiftToTop{
+	position:fixed;
+	top:35px;
+}
+/*------------------------------------------------------*/
+hr{
+	color:#99ddff;
+}
+.lora{
+	font-family: Lora;
+	font-size:20px;
+}
+div>p{
+	margin-left:5%;
+	text-align:left;
+	font-family: Lora;
+}
+.lightBlue{
+	color:#99ddff;
+}
