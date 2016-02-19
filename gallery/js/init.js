@@ -1,7 +1,7 @@
 /*-----------------init-----------------*/
 $(document).ready(function(){
 	
-	$('.btnToTop').on("click",function(){
+	$('.clickAreaToTop').on("click",function(){
       $('html, body').animate({scrollTop : 0},800);
       return false;
    });
@@ -29,7 +29,33 @@ $(document).ready(function(){
 		$('html,body').animate({scrollTop:section.top},800);
 		return false;
 	});
-   
+	$('.btnToBack').hover(function(){
+		changeSVGColor('toBack','path','#fff');
+	},function(){
+		changeSVGColor('toBack','path','#01448f');
+	});
+	$('.btnToTop').hover(function(){
+		changeSVGColor('toTop','path','#fff');
+	},function(){
+		changeSVGColor('toTop','path','#01448f');
+	});
   
-    $(".path1").attr("stroke","red");
+    
 });
+
+/*--------------------Change SVG image color of strokes---------------------*/
+/*-------SVGId    		id of main IMAGE									*/
+/*-------SVGElementId   partial id of line,path, etc. inside of image		*/
+/*-------color    		demanding color of image							*/
+function changeSVGColor(SVGId,SVGElementId,color){
+	
+	
+        var a = document.getElementById(SVGId);
+        var svgDoc = a.contentDocument; 
+        var delta = svgDoc.getElementById(SVGElementId);
+		var svgPaths = svgDoc.getElementsByClassName(SVGElementId);
+		for(var i=0;i<svgPaths.length;i++){
+			svgPaths[i].style.stroke=color;
+		}
+    
+}
