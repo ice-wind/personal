@@ -54,6 +54,7 @@
 .subCategory{
 	font-family: Lora;
 	text-decoration:underline;
+	margin-left:-40px;
 }
 .categorySection{
 	margin-bottom: 50px;
