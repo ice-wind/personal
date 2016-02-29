@@ -6,7 +6,22 @@ $(window).scroll(function() {
 	}else{
 		$('.navbar-container').removeClass('shrink');
 	}
+	objectsFadeIn();
 })
+
+/*---------------Fade in all object which have objectFadeIn class when scrolled on-----------*/
+function objectsFadeIn(){
+	$('.objectFadeIn').each(function(){
+		
+		var bottomOfObject = $(this).outerHeight() + $(this).offset().top;
+		var bottomOfWindow = $(window).height() + $(window).scrollTop();
+		
+		if(bottomOfObject<bottomOfWindow){
+			$(this).animate({'opacity':'1'},600);
+		}
+	});
+	
+}
 
 $('#contactForm').submit(function(e){
 	$('#contactForm button').prop('disabled', true);

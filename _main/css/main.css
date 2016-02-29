@@ -176,3 +176,7 @@ body {
 	position:relative;
 	visibility:visible;
 }
+/*------------Fade IN------------------*/
+.objectFadeIn{
+	opacity:0;
+}
