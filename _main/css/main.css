@@ -3,7 +3,6 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
   color: #5a5a5a;
 }
 
@@ -28,8 +27,49 @@ body {
 	position:fixed;
 	
 	-webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
+
+/**---------------------SVG-------------------**/
+#svgelem{
+	position: relative;
+	left: 50%;
+	top: 87%;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	transform-origin: left top;
+}
+#redrect{
+	position:relative;
+	fill:#20b1ea;
+	top:30;
+	left:50%;
+}
+/*   line animation   */
+
+#left_line1,#right_line1,#left_line2,#right_line2{
+	stroke:#20b1ea;
+	stroke-width:2;
+	
+	-webkit-animation: myfirst 2s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+	animation: myfirst 2s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
+ 
+}
+#left_line2,#right_line2{
+	animation-delay: .5s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+	0% {stroke:#20b1ea;}
+    100%   {stroke:green;}
+}
+/* Standard syntax */
+@keyframes myfirst {
+	0% {stroke:#20b1ea;}
+    100%   {stroke:green;}  
+}
+
 /*Shrink effect*/
 .shrink{
 	height:60px;
@@ -131,6 +171,41 @@ body {
 .unlivingField{
 	position:absolute;
 	z-index:0;
+}
+
+/*------------------                            FOOTER                                      ------------------------------*/
+footer{
+	margin-top: 20px;
+	padding-top: 20px;
+	background-image: url('../img/noisy-texture.png');/*#353535*/
+	background-repeat: repeat;
+	color:#e0e0e0;
+	min-height: 150px;	
+}
+.footerCont{
+	margin-bottom:20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #545454;
+	text-align:center;
+}
+.footerCont h4 > strong{
+	border-bottom:1px solid gray; 
+}
+.footerCont li,i{
+	list-style-type:none;
+	padding:2px;
+	text-align:left;
+	margin-left:20px;
+	
+	-webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.footerCont li:hover{
+	color:#0cafd2;
+	cursor:pointer;
+}
+.footerCont i:hover{
+	color:#0cafd2;
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
