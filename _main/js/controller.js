@@ -3,9 +3,11 @@
 $(window).scroll(function() {
 	if ($(document).scrollTop()>80){
 		$('.navbar-container').addClass('shrink');
+		$('#svgelem').fadeOut();
 	}else{
 		$('.navbar-container').removeClass('shrink');
 	}
+	
 	objectsFadeIn();
 })
 

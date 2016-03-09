@@ -6,7 +6,6 @@ body {
   color: #5a5a5a;
 }
 
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -16,23 +15,81 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 20;
+  z-index: 2;
 }
-
 .navbar-container{
 	background-color:#20b1ea;
 	height:180px;
 	width:100%;
 	top:0px;
 	position:fixed;
+	z-index:5;
 	
-	-webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+	-webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+/*
+.navbar-container:before{
+	position: absolute;
+	content: "";
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	height: 5px;
+	width: 50%;
+	bottom: 10px;
+	transform: rotate(-3deg);
+	z-index: -2;
+}
+.navbar-container:after{
+	position: absolute;
+	content: "";
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	height: 5px;
+	width: 50%;
+	bottom: 10px;
+	transform: rotate(3deg);
+	z-index: -2;
+	right:0px;
+}
+*/
+.drop-shadows:before,
+.drop-shadows:after{
+	position:absolute;
+	content:"";
+	width:50%;
+	height:10px;
+	left:0px;
+	top:160px;
+	z-index:-2;
+	
+	-webkit-transition: all 0.7s ease;
+	-moz-box-shadow:all 0.7s ease;
+    transition: all 0.7s ease;
+	
+	-webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);   
+       -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(-4deg);    
+       -moz-transform:rotate(-4deg);   
+        -ms-transform:rotate(-4deg);   
+         -o-transform:rotate(-4deg);
+            transform:rotate(-4deg);
+}
+.drop-shadows:after{
+	left:50%;
+	
+	-webkit-transform:rotate(4deg);    
+       -moz-transform:rotate(4deg);   
+        -ms-transform:rotate(4deg);   
+         -o-transform:rotate(4deg);
+            transform:rotate(4deg);
+			
 }
 
 /**---------------------SVG-------------------**/
 #svgelem{
 	position: relative;
+	width:30px;
+	height:30px;
 	left: 50%;
 	top: 87%;
 	-ms-transform: rotate(45deg);
@@ -45,6 +102,10 @@ body {
 	fill:#20b1ea;
 	top:30;
 	left:50%;
+}
+#header_rectangle{
+	position:relative;
+	fill:#20b1ea;
 }
 /*   line animation   */
 
