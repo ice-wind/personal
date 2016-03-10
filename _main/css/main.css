@@ -208,7 +208,6 @@ body {
 	z-index: 10;
 	display:none;
 }
-
 .contactForm{
 	padding:20px;
 	border: 1px solid #ddd;
@@ -233,7 +232,9 @@ body {
 	position:absolute;
 	z-index:0;
 }
-
+.input-group .form-control{
+	z-index:1;
+}
 /*------------------                            FOOTER                                      ------------------------------*/
 footer{
 	margin-top: 20px;
