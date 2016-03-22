@@ -16,6 +16,9 @@
 	font-family: Ubuntu;
 	color:#084d6e;
 	padding:40px;
+	background-image:url('../img/brush2.jpg');
+	background-repeat:no-repeat;
+	background-position: 100% 50%;
 }
 .secondTitle{
 	padding:40px;
