@@ -104,15 +104,14 @@ function contactFormValidate(){
 		formValid = false;
 		console.log('name');
 	}
-	if((email==='')||(email.length>35)||(email.length<5)||(emailPattern.test(email))){
+	if((email==='')||(email.length>35)||(email.length<3)||(!emailPattern.test(email))){
 		$('.emailNote').removeClass('sr-only');
 		formValid = false;
 		console.log('email');
 		console.log((email===''));
-		console.log((email.length>35)||(email.length<5));
+		console.log((email.length>35)||(email.length<3));
 		console.log(emailPattern.test(email));
 		console.log('email');
-
 	}
 	if((subject.length>35)||(textPattern.test(subject))){
 		$('.subjectNote').removeClass('sr-only');

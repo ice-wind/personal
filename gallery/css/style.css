@@ -1,10 +1,18 @@
 @font-face {
     font-family: Ubuntu;
-    src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
+    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
 }
 @font-face {
     font-family: Lora;
-    src: url(../fonts/Lora/Lora-Italic.ttf);
+    src: url('../fonts/Lora/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: Berkshire ;
+    src: url('../fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: LaBelleAurore ;
+    src: url('../fonts/La_Belle_Aurore/LaBelleAurore.ttf') format('truetype');
 }
 
 .container{
@@ -13,12 +21,12 @@
 }
 .mainTitle{
 	font-size:56px;
-	font-family: Ubuntu;
+	font-family: LaBelleAurore;
 	color:#084d6e;
 	padding:40px;
 	background-image:url('../img/brush2.jpg');
 	background-repeat:no-repeat;
-	background-position: 100% 50%;
+	background-position: 80% 70%;
 }
 .secondTitle{
 	padding:40px;
@@ -136,12 +144,12 @@
 	top:20%;
 }
 /*------------------------------------------------------*/
+
 body{
 	/*-------------PATTERN from http://subtlepatterns.com ----------------------
 	
 	background-image:url('../img/bright_squares.png');
 	background-repeat:repeat;
-
 	*/
 }
 hr{
@@ -158,4 +166,23 @@ div>p{
 }
 .lightBlue{
 	color:#99ddff;
+}
+
+/*--------------------------------Media-CSS---------------------------*/
+
+@media (max-width: 360px) {
+	.leftMenu{
+		display:none;
+	}
+	.mainContainer{
+		margin-left:0px;
+	}
+	.subCategory{
+		margin-left:0px;
+	}
+}
+@media (max-width: 980px) {
+	.mainTitle{
+		background-position: 100% 50%;
+	}
 }

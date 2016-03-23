@@ -1,4 +1,9 @@
 $(document).ready(function(){
+/*--------------------------Document ready set up properties------------------------*/
+	if(scrollOn($('.progress'))){
+		$('.progress-bar-language').css('width','80%');
+	}
+	
 	$('.circle').hover(function(){
 		$(this).children('i').css('color','#679cb9');
 	},function(){
@@ -25,10 +30,6 @@ $(window).scroll(function() {
 	if(scrollOn($('.progress'))){
 		$('.progress-bar-language').css('width','80%');
 	}
-	
-	
-		
-	
 })
 
 function scrollOn(element){

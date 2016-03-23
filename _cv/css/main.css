@@ -10,10 +10,11 @@ body{
 	background-image:url("../img/background_white_paper.png");
 	background-repeat: repeat;
 }
-.main_sheet{
-	
+.main_sheet{	
 }
-
+.mainTitle img{
+	width:80px;
+}
 .header{
 	padding:20px;
 	margin-bottom:20px;
