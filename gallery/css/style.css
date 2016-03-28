@@ -28,6 +28,9 @@
 	background-repeat:no-repeat;
 	background-position: 80% 70%;
 }
+.mainTitle img{
+	width:80px;
+}
 .secondTitle{
 	padding:40px;
 	margin-left:-190px;
@@ -37,13 +40,11 @@
 }
 .leftMenu{
 	border-right: 1px solid #99ddff;
-	height:250px;
-	width:160px;
 	position:fixed;
-	padding-right: 30px;
+	padding-right: 60px;
 	font-size: 20px;
 	color:#000;
-	top:300px;
+	top:330px;
 	
 	-webkit-transition-property: top;
     -webkit-transition-duration: 1.5s; 
@@ -68,7 +69,7 @@
 	margin-left:-40px;
 }
 .categorySection{
-	margin-bottom: 50px;
+	margin-top: 20px;
 }
 .categorySection::after{
 	content: "";
@@ -141,7 +142,7 @@
 /*-----------------------ADDED CLASSES------------------*/
 .shiftToTop{
 	position:fixed;
-	top:20%;
+	top:5%;
 }
 /*------------------------------------------------------*/
 
@@ -161,6 +162,7 @@ hr{
 }
 div>p{
 	margin-left:5%;
+	margin-bottom:0px;
 	text-align:left;
 	font-family: Lora;
 }

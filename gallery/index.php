@@ -20,76 +20,78 @@
 		<div class="leftMenu">
 		<div class='leftMenuLine'></div>
 			<div class="category">
-				<div class='categorySection sectionOne'>
-				<p>Trip Photos One</p>
-				</div>
-				<div class='categorySection sectionTwo'>
-				<p>Trip Photos Two</p>
-				</div>
+				<?php
+					$path_2gallery='photos_gallery/';
+					$thumbnailsWidth=100;
+					$thumbnailsFolder="thumbs";
+					$allowed_extensions = array("jpg","jpeg");
+					$categories=array();
+					$photo_category = '';
+					$output='';
+					$category_menu='';
+					$thumbFolderCreated=false;
+					$createThumbs = false;
+					
+					class MyPhoto
+					{
+						public $name='';
+						public $describe='';
+						public $extension='';
+						public $dirName='';
+						public $path='';
+						public $category='';
+					}
+					
+					$category_folders=glob($path_2gallery."*");
+					$categoriesPath = findCategories($category_folders);
+					$photos=findPhoto($categoriesPath,$allowed_extensions);
+					
+					$categories = getCategories($categoriesPath);
+					$createThumbs = createThumbnailFolders($categoriesPath,$thumbnailsFolder,$thumbFolderCreated);
+					foreach($categories as $category){
+						$category_menu.='	<div class="categorySection '.$category.'">';
+						$category_menu.='	<p>'.$category.'</p>';
+						$category_menu.='	</div>';
+					}
+					echo $category_menu;
+					
+					function getCategories($categoriesPath){
+						$categories=array();
+						
+						foreach($categoriesPath as $categoryPath){
+							$category_array=explode('/',$categoryPath);
+							$category=$category_array[count($category_array)-1];
+							array_push($categories,$category);
+						}
+						return $categories;
+					}
+				?>
 			</div>
 		</div>
 		<div class="mainContainer">
-			<div id='sectionOne'>
-			<div class="subCategory">Cities</div>
-			  <a class="example-image-link" href="img/lake.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/thumbnails/lake.jpg" alt=""/></a>
-			  <a class="example-image-link" href="img/tree.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/thumbnails/tree.jpg" alt="" /></a>
-			  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
-			  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a>
-			  <a class="example-image-link" href="img/lake.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/thumbnails/lake.jpg" alt=""/></a>
-			  <a class="example-image-link" href="img/tree.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/thumbnails/tree.jpg" alt="" /></a>
-			  <a class="example-image-link" href="img/lake.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/thumbnails/lake.jpg" alt=""/></a>
-			  <a class="example-image-link" href="img/tree.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/thumbnails/tree.jpg" alt="" /></a>
-			</div>
-			<div id='sectionTwo'>
-			<div class="subCategory">Nature</div>
-			  <a class="example-image-link" href="img/lake.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/thumbnails/lake.jpg" alt=""/></a>
-			  <a class="example-image-link" href="img/tree.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/thumbnails/tree.jpg" alt="" /></a>
-			  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
-			  <a class="example-image-link" href="img/lake.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="img/thumbnails/lake.jpg" alt=""/></a>
-			  <a class="example-image-link" href="img/tree.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="img/thumbnails/tree.jpg" alt="" /></a>
-			  <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a>
-			</div>
 			<?php 
 				
-				$path_2gallery='photos_gallery/';
-				$thumbnailsWidth=100;
-				$thumbnailsFolder="thumbs";
-				$allowed_extensions = array("jpg","jpeg");
-				$photo_category = '';
-				$output='';
 				
-				class MyPhoto
-				{
-					public $name='';
-					public $describe='';
-					public $extension='';
-					public $dirName='';
-					public $path='';
-					public $category='';
-				}
 				
-				$category_folders=glob($path_2gallery."*");
-				$categoriesPath = findCategories($category_folders);
-				$photos=findPhoto($categoriesPath,$allowed_extensions);
-				
-				createThumbnailFolders($categoriesPath,$thumbnailsFolder);
-				
-				function createThumbnailFolders($categories,$thumbnailsFolder){
+				function createThumbnailFolders($categories,$thumbnailsFolder,$thumbFolderCreated){
 					$thumbnailsPath='';
 					foreach($categories as $category){
 						$thumbnailsPath=$category.'/'.$thumbnailsFolder;
 						if (!file_exists($thumbnailsPath)) {
+							$thumbFolderCreated = true;
 							mkdir($thumbnailsPath, 0777, true);
 						}
 					}
+					return $thumbFolderCreated;
 				}
-				
-				generateThumbnails($photos,$thumbnailsFolder,$thumbnailsWidth);
-				
+				if($createThumbs){
+					generateThumbnails($photos,$thumbnailsFolder,$thumbnailsWidth);
+				}
 				
 				foreach($photos as $photo){
 					if($photo_category!=$photo->category){
 						$photo_category = $photo->category;
+						$output.= '<div id='.$photo->category.'></div>';
 						$output.= '<div class="subCategory">'.$photo->category.'</div>';
 					}
 					$output.='<a class="example-image-link" href="'.$photo->path.'" data-lightbox="'.$photo->category.'" data-title="'.$photo->describe.'"><img class="example-image" src="'.$photo->dirName.'/'.$thumbnailsFolder.'/'.$photo->name.'" alt=""/></a>';

@@ -18,17 +18,18 @@ $(document).ready(function(){
       }
    });
 /*---------------scroll to selected section---------------*/
+
 	
-	$('.sectionOne').on('click',function(){
-		var section = $('#sectionOne').offset();
+	$('.categorySection ').on('click',function(){
+		var category = $(this).find('p').text();
+		console.log(category);
+		var section = $('#'+category).offset();
 		$('html,body').animate({scrollTop:section.top},800);
 		return false;
 	});
-	$('.sectionTwo').on('click',function(){
-		var section = $('#sectionTwo').offset();
-		$('html,body').animate({scrollTop:section.top},800);
-		return false;
-	});
+	
+/*---------------------------------------------------------*/	
+	
 	$('.btnToBack').hover(function(){
 		changeSVGColor('toBack','path','#fff');
 	},function(){
