@@ -31,6 +31,9 @@
 .mainTitle img{
 	width:80px;
 }
+.gallery_image{
+	padding:5px;
+}
 .secondTitle{
 	padding:40px;
 	margin-left:-190px;

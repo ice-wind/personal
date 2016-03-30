@@ -3,13 +3,17 @@
 $(window).scroll(function() {
 	if ($(document).scrollTop()>80){
 		$('.navbar-container').addClass('shrink');
+		$('.hideMenu').addClass('menuwhite');
 		$('#svgelem').fadeOut();
 	}else{
 		$('.navbar-container').removeClass('shrink');
+		$('.hideMenu').removeClass('menuwhite');
 	}
 	
 	objectsFadeIn();
 })
+/*----------------Fade in Menu---------------------------------------------------------------*/
+
 
 /*---------------Fade in all object which have objectFadeIn class when scrolled on-----------*/
 function objectsFadeIn(){

@@ -18,11 +18,11 @@ body {
   z-index: 2;
 }
 .navbar-container{
-	background-color:#20b1ea;
+	background-color:black;
 	height:180px;
 	width:100%;
 	top:0px;
-	position:fixed;
+	position:relative;
 	z-index:5;
 	
 	-webkit-transition: all 0.7s ease;
@@ -99,18 +99,18 @@ body {
 }
 #redrect{
 	position:relative;
-	fill:#20b1ea;
+	fill:black;
 	top:30;
 	left:50%;
 }
 #header_rectangle{
 	position:relative;
-	fill:#20b1ea;
+	fill:black;
 }
 /*   line animation   */
 
 #left_line1,#right_line1,#left_line2,#right_line2{
-	stroke:#20b1ea;
+	stroke:white;
 	stroke-width:2;
 	
 	-webkit-animation: myfirst 2s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
@@ -122,19 +122,46 @@ body {
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
-	0% {stroke:#20b1ea;}
-    100%   {stroke:green;}
+	0% {stroke:black;}
+    100%   {stroke:white;}
 }
 /* Standard syntax */
 @keyframes myfirst {
-	0% {stroke:#20b1ea;}
-    100%   {stroke:green;}  
+	0% {stroke:black;}
+    100%   {stroke:white;}  
 }
 
 /*Shrink effect*/
 .shrink{
 	height:60px;
 }
+/*	-------Menu-----------------------------------*/
+.hideMenu{
+	width:100%;
+	height:30px;
+	position:fixed;
+	background-color:black;
+	z-index:10;
+	border-bottom:solid 1px white;
+	
+	-webkit-transition: all 0.7s ease;
+	-moz-box-shadow:all 0.7s ease;
+    transition: all 0.7s ease;
+}
+.menuwhite{
+	background-color:white;
+}
+
+/*=================================================*/
+/*	Introduction-----------------------------------*/
+.introduction{
+	width:100%;
+	height:500px;
+	position:relative;
+	background-color:#e1e1e1;
+}
+
+/*=================================================*/
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -142,7 +169,6 @@ body {
 .carousel {
   height: 500px;
   margin-bottom: 60px;
-  top:80px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
