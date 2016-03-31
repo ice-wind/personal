@@ -3,17 +3,41 @@
 $(window).scroll(function() {
 	if ($(document).scrollTop()>80){
 		$('.navbar-container').addClass('shrink');
-		$('.hideMenu').addClass('menuwhite');
+		$('.changeColor').addClass('menuwhite');
 		$('#svgelem').fadeOut();
 	}else{
 		$('.navbar-container').removeClass('shrink');
-		$('.hideMenu').removeClass('menuwhite');
+		$('.changeColor').removeClass('menuwhite');
 	}
 	
 	objectsFadeIn();
 })
-/*----------------Fade in Menu---------------------------------------------------------------*/
+/*----------------Smooth scrolling on scroll spy---------------------------------------------------------------*/
+$(document).ready(function(){
+	$('body').scrollspy({target:'.scrollclass',offset:65});
+	// Add scrollspy to <body>
+	//$('body').scrollspy({target: ".navbar-collapse", offset: 80}); 
 
+	// Add smooth scrolling to all links inside a navbar
+	$("#myNavbar a").on('click', function(event){
+
+	  // Prevent default anchor click behavior
+	  event.preventDefault();
+
+	  // Store hash (#)
+	  var hash = this.hash;
+
+	  // Using jQuery's animate() method to add smooth page scroll
+	  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
+	  $('html, body').animate({
+		scrollTop: $(hash).offset().top
+	  }, 800, function(){
+
+		// Add hash (#) to URL when done scrolling (default click behavior)
+		window.location.hash = hash;
+	  });
+	});
+});
 
 /*---------------Fade in all object which have objectFadeIn class when scrolled on-----------*/
 function objectsFadeIn(){
