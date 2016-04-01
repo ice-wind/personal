@@ -1,8 +1,5 @@
 $(document).ready(function(){
 /*--------------------------Document ready set up properties------------------------*/
-	if(scrollOn($('.progress'))){
-		$('.progress-bar-language').css('width','80%');
-	}
 	
 	$('.circle').hover(function(){
 		$(this).children('i').css('color','#679cb9');
@@ -18,9 +15,9 @@ $(document).ready(function(){
 	
 	$('.box').hover(function(){
 
-		$(this).children('.titleHoverIn').addClass('abc');
+		$(this).children('.titleHoverIn').addClass('titleScale');
 	},function(){
-		$(this).children('.titleHoverIn').removeClass('abc');
+		$(this).children('.titleHoverIn').removeClass('titleScale');
 	});
 	
 	

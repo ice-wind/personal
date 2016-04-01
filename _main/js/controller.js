@@ -5,18 +5,25 @@ $(window).scroll(function() {
 		$('.navbar-container').addClass('shrink');
 		$('.changeColor').addClass('menuwhite');
 		$('#svgelem').fadeOut();
+		$('.icon-bar').css('background-color','grey');
+		$('.navbar-brand').find('img').css('opacity','1');
 	}else{
 		$('.navbar-container').removeClass('shrink');
 		$('.changeColor').removeClass('menuwhite');
+		$('.icon-bar').css('background-color','antiquewhite');
 	}
 	
 	objectsFadeIn();
+	
+	if(scrollOn($('.progress'))){
+		console.log('progress');
+		$('.progress-bar-language').css('width','80%');
+	}
 })
 /*----------------Smooth scrolling on scroll spy---------------------------------------------------------------*/
 $(document).ready(function(){
 	$('body').scrollspy({target:'.scrollclass',offset:65});
 	// Add scrollspy to <body>
-	//$('body').scrollspy({target: ".navbar-collapse", offset: 80}); 
 
 	// Add smooth scrolling to all links inside a navbar
 	$("#myNavbar a").on('click', function(event){
@@ -37,7 +44,34 @@ $(document).ready(function(){
 		window.location.hash = hash;
 	  });
 	});
+/*-------------------------------------Project  BOX anim------------------------------------------------*/
+	$('.box').hover(function(){
+		$(this).children('p').css('opacity','0');
+	},function(){
+		$(this).children('p').css('opacity','1');
+	});
+	
+	$('.box').hover(function(){
+
+		$(this).children('.titleHoverIn').addClass('titleScale');
+	},function(){
+		$(this).children('.titleHoverIn').removeClass('titleScale');
+	});
+	
 });
+/*-------------------------------------SKILLS------------------------------------------------*/
+/*------------------------------------Progress bars------------------------------------------*/
+
+
+function scrollOn(element){
+var bottomOfObject = (element).outerHeight()+(element).offset().top;
+var bottomOfWindow = $(window).height() + $(window).scrollTop();
+if(bottomOfObject<bottomOfWindow){
+	return true;
+}else{
+	return false;
+}
+}
 
 /*---------------Fade in all object which have objectFadeIn class when scrolled on-----------*/
 function objectsFadeIn(){
