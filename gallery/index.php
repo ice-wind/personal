@@ -68,7 +68,7 @@
 				
 			?>
 		</div>
-		<div class="button btnToBack"><object type="image/svg+xml" data="img/back.svg" id="toBack" width="100%" height="100%"></object></div>
+		<div class="button btnToBack"><object type="image/svg+xml" data="img/back.svg" id="toBack" width="100%" height="100%"></object><div class='clickAreaToBack'></div></div>
 		<div class="button btnToTop"><object  type="image/svg+xml" data="img/ToTop.svg" id="toTop" width="100%" height="100%"></object><div class='clickAreaToTop'></div></div>
   </section>
   <footer>

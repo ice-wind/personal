@@ -16,8 +16,10 @@ $(window).scroll(function() {
 	objectsFadeIn();
 	
 	if(scrollOn($('.progress'))){
-		console.log('progress');
 		$('.progress-bar-language').css('width','80%');
+	}
+	if(scrollOn($('.arrow_icon_footer'))){
+		$('.arrow_icon_footer').css('opacity','1');
 	}
 })
 /*----------------Smooth scrolling on scroll spy---------------------------------------------------------------*/
@@ -57,6 +59,11 @@ $(document).ready(function(){
 	},function(){
 		$(this).children('.titleHoverIn').removeClass('titleScale');
 	});
+/*--------------------------------------Scroll to top--------------------------------------------------*/
+	$('.arrow_icon_footer').on('click',function(){
+		 $("html, body").animate({ scrollTop: 0 }, "slow");
+	})
+
 	
 });
 /*-------------------------------------SKILLS------------------------------------------------*/
@@ -228,3 +235,13 @@ $(document).ready(function() {
   });
   
 });
+
+/*-------------------------------------INIT google map-------------------------------------------------*/
+	function initMap() {
+		console.log('google map:');
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+			  center: {lat: 48.1486, lng: 17.1077},
+			  zoom: 11
+			});
+		  }
