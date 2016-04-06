@@ -264,7 +264,7 @@ body {
 	height:auto;
 	position:relative;
 	background-color:#7ed4f6;
-	padding: 10px 20px;
+	padding: 25px 20px;
 	padding-bottom:30px;
 	text-align:center;
 }
@@ -291,7 +291,7 @@ body {
 	height:auto;
 	position:relative;
 	background-color:#e9f2ff;
-	padding: 10px 20px;
+	padding: 25px 20px;
 	padding-bottom:30px;
 	text-align:center;
 }
@@ -304,7 +304,7 @@ body {
 	height:auto;
 	position:relative;
 	background-color:##b6e5fb;
-	padding: 10px 20px;
+	padding: 25px 20px;
 	padding-bottom:30px;
 	text-align:center;
 }
@@ -408,7 +408,7 @@ body {
 	height:auto;
 	position:relative;
 	background-color:#e9f2ff;
-	padding: 10px 20px;
+	padding: 25px 20px;
 	padding-bottom:30px;
 	text-align:center;
 }
@@ -503,7 +503,7 @@ body {
 }
 .contactForm{
 	padding:20px;
-	margin-bottom:50px;
+	margin:5% 8% 10% 8%;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	
@@ -650,6 +650,7 @@ footer{
 	-moz-transition-delay: 1.2s;
     transition-delay: 1.2s;
 }
+
 /*------------Fade IN------------------*/
 .objectFadeIn{
 	opacity:0;
