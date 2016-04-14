@@ -63,7 +63,15 @@ $(document).ready(function(){
 	$('.arrow_icon_footer').on('click',function(){
 		 $("html, body").animate({ scrollTop: 0 }, "slow");
 	})
-
+/*--------------------------------------Menu hover animation-------------------------------------------*/
+	$('.navbar-toggle').hover(function(){
+		console.log('hit');
+		$('.icon-bar:first-child').stop().animate({top:"-=3px"},"fast");
+		$('.icon-bar:last-child').stop().animate({bottom:"-=3px"},"fast");
+	},function(){
+		$('.icon-bar:first-child').stop().animate({top:"+=3px"},"fast");
+		$('.icon-bar:last-child').stop().animate({bottom:"+=3px"},"fast");
+	});
 	
 });
 /*-------------------------------------SKILLS------------------------------------------------*/
@@ -88,7 +96,7 @@ function objectsFadeIn(){
 		var bottomOfWindow = $(window).height() + $(window).scrollTop();
 		
 		if(bottomOfObject<bottomOfWindow){
-			$(this).animate({'opacity':'1'},600);
+			$(this).animate({'opacity':'1','left':'0'},600);
 		}
 	});
 	
