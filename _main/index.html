@@ -33,152 +33,254 @@
   </head>
 
 
- <body>
+ <body data-spy="scroll" data-target=".navbar" >
     <div class="navbar-wrapper ">
 		<div class="navbar-container">
-			<svg id="svgelem">
-				 <rect id="redrect" width="30" height="30" />
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+			<symbol id="arrow" viewBox="0 0 43 43">
+			<g transform=" translate(21.5 0)">
+			<g position='relative' transform="rotate(45)" >
+				<g id='bg_arrow_icon' position='relative' fill='black' >
+				 <rect  width="30" height="30"  />
+				</g>
+
 				 
-				 <line id="left_line1" x1="5" y1="20" x2="20" y2="20"/>
-				 <line id="right_line1" x1="20" y1="5" x2="20" y2="20"/>
-				 
-				 <line id="left_line2" x1="5" y1="25" x2="25" y2="25"/>
-				 <line id="right_line2" x1="25" y1="5" x2="25" y2="25"/>
-			</svg>
+				<g stroke='white' stroke-width='2' >
+					 <g>
+					 <line  x1="5" y1="20" x2="20" y2="20"/>
+					 <line  x1="20" y1="5" x2="20" y2="20"/>
+					 <animate  attributeName="stroke" values="white; black; white" dur="2s" repeatCount="indefinite"  />
+					 </g>
+					 <g>
+					 <line  x1="5" y1="25" x2="25" y2="25"/>
+					 <line  x1="25" y1="5" x2="25" y2="25"/>
+					 <animate attributeName="stroke" values="white; black; white" dur="2s" repeatCount="indefinite"  begin="0.5s" />
+					 </g>
+					 
+				</g>
+			</g>
+			</g>
+			</symbol>
+		</svg>
+			<svg class="main_arrow_icon"><use xlink:href="#arrow" /></svg>
+			
 		</div>
     </div>
-	<!---Hide menu--------------------------------------->
-	<div class='container hideMenu'>
-		
+<!-------------------------------------------------------Main menu--------------------------------------->
+	<div class='container changeColor'>
+		<nav class="navbar navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="#"><img src='img/myBrand.jpg' /></a>
+			</div>
+			<div>
+			  <div class="collapse navbar-collapse navbar-right" id="myNavbar" >
+				<ul class="nav navbar-nav">
+				  <li><a  href="#introduction">Introduction</a></li>
+				  <li><a  href="#skills">Skills</a></li>
+				  <li><a  href="#experiences">Experiences</a></li>
+				  <li><a  href="#projects">Projects</a></li>
+				  <li><a  href="#interests">Interests</a></li>
+				  <li><a  href="#contact">Contact Me</a></li>
+				  
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</nav>    
 	</div>
 	<!--================================================->
 	<!---Introduction------------------------------------>
-	<div class='container introduction'>
-		
+	<div id='introduction' class='container spyScroll introduction '>
+		<div class='row '>
+			<h2 class='objectFadeIn'>Introduction</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-4 edges_vertical'>
+				<img src='img/picture.jpg' />
+			</div>
+			<div class='col-md-4 myStory edges_vertical edges_horizontal text-justify '>
+				<h4><p><strong>My story</strong></p></h4>
+				<em >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</em>
+				<div class='more_about'><strong>Find more here </strong><a href='../_cv/index.html'><i class="fa fa-user fa-2x"></i></a></div>
+			</div>
+			<div class='col-md-4 edges_vertical edges_horizontal text-left'>
+				<h4><p><strong>Personal information:</strong></p></h4>
+				<ul class="text-justify">
+					<li><div class='border_box'><strong>Name</strong> <span>Lorem ipsum</span></div></li>
+					<li><div class='border_box'><strong>Age</strong> <span>Lorem ipsum</span></div></li>
+					<li><div class='border_box'><strong>Phone</strong> <span>Lorem ipsum</span></div></li>
+					<li><div class='border_box'><strong>Email</strong> <span>Lorem ipsum</span></div></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	
 	<!--================================================->
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette ">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-/**/
-      <hr class="featurette-divider">
-	<div class='contactForm objectFadeIn'><p>Contact Me:</p>
+	<!---Skills------------------------------------------>
+	<div id='skills' class='container spyScroll skills'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Skills</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-5 col-md-offset-2 edges_vertical edges_horizontal text-center'>
+				<img src='img/picture.jpg' />
+			</div>
+			<div class='col-md-5 edges_vertical edges_horizontal text-left'>
+				<h4><p><strong>PC loremepsum</strong></p></h4>
+				<dl class="dl-horizontal progress_bars">
+				  <dt>...1...</dt>
+				  <dd>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info progress-bar-language" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  </div>
+					</div>
+				  </dd>
+				  <dt>...2...</dt>
+				  <dd>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info progress-bar-language" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  </div>
+					</div>
+				  </dd>
+				  <dt>...3...</dt>
+				  <dd>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info progress-bar-language" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  </div>
+					</div>
+				  </dd>
+				  <dt>...4...</dt>
+				  <dd>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info progress-bar-language" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  </div>
+					</div>
+				  </dd>
+				  <dt>...5...</dt>
+				  <dd>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-info progress-bar-language" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  </div>
+					</div>
+				  </dd>
+				</dl>
+			</div>														
+		</div>
+	</div>
+	<div class='skew_border'></div>
+	<!--================================================+++++->
+	<!---Experiences------------------------------------------>
+	
+	<div id='experiences' class='container spyScroll experiences'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Experiences</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-9 col-md-offset-3 edges_vertical text-center'>
+				<dl class="dl-horizontal">
+				  <dt><em>Time</em></dt>
+				  <dd><em>CM</em></dd>
+				  <dt>2.5.87-3.6.56</dt>
+				  <dd>A&B</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!--================================================+++++->
+	<!---Projects--------------------------------------------->
+	<div id='projects' class='container spyScroll projects'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Projects</h2>
+		</div>
+		<div class='row'>
+			<div class=' project_container col-md-5 col-md-offset-2 edges_vertical text-center'>
+				<div class="box"><div class='titleHoverOff'> <img src='img/win.png'><p>SPM1</p></div><div class='titleHoverIn'><span>1.class</span></div></div>
+			</div>
+			<div class='project_container col-md-5  edges_vertical text-center'>
+				<div class="box"><div class='titleHoverOff'><img src='img/win.png'><p>SPM2</p></div><div class='titleHoverIn'><span>FoRPi</span></div></div>
+			</div>
+		</div>
+	</div>
+	<!--================================================+++++->
+	<!---Interests--------------------------------------------->
+	<div id='interests' class='container spyScroll interests'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Interests</h2>
+		</div>
+		<div class='row'>
+			<div class=' gallery_container col-md-7 col-md-offset-2 edges_vertical text-center'>
+				<p>Gallery</p>
+					<!--================================================->
+					<!-- Carousel
+					================================================== -->
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					  </ol>
+					  <div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Example headline.</h1>
+							  <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+							  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Another example headline.</h1>
+							  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>One more for good measure.</h1>
+							  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
+					</div>
+					<!-- /.carousel -->
+			</div>
+			<div class='gallery_link col-md-3  edges_vertical text-center'>
+				<div class="gallery_link"><a href='../gallery/index.php'><img src='img/gallery.jpg' /></a></div>
+			</div>
+		</div>
+	</div>
+	
+<!--------------CONTACT Form---------------------------------------------->
+	<div id='contact'></div>
+	<div class='contactForm spyScroll'>
+		<div class='row'>
+			<h2>Contact Me:</h2>
+		</div>
 		<div class='container myForm '>
 			<form class='form-horizontal' id='contactForm' action='php/contactForm.php' method='POST'>
 		
@@ -263,16 +365,22 @@
 			</div>
 		</div>
 	</div>
-
-	</div><!-- /.container -->
     
 <!-- FOOTER -->
 	<footer >
 	<div class="container-fluid ">
+		<div class="row text-center">
+			<svg class="arrow_icon_footer"><use xlink:href="#arrow" /></svg>
+		</div>
+		<div class="row footerHeader text-center">
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>About Me ...</strong></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>Any Questions?</strong></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>Where can you find me</strong></h4></div>
+		</div>
 		<div class="row footerCont">
-		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>About Me ...</strong><p ><small> <ul><li><div class="icons"><i class="fa fa-envelope-o"></div ></i></li><li><div class="icons"><i class="fa fa-mobile"></div></i></li><li><div class="icons"><i class="fa fa-home"></div></i></li></ul></small></p></h4></div>
-		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>Any Questions?</strong><small><ul><li>1. </li><li>2. </li><li>3. </li></ul></small></h4></div>
-		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>I am Online !</strong><small></small></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><p ><small> <ul><li><div class="icons"><i class="fa fa-envelope-o"></div ></i></li><li><div class="icons"><i class="fa fa-mobile"></div></i></li><li><div class="icons"><i class="fa fa-home"></div></i></li></ul></small></p></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><small><ul><li>1. </li><li>2. </li><li>3. </li></ul></small></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><small><div id="map"></div></small></h4></div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
@@ -295,5 +403,6 @@
 	<script src="js/controller.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSH1lUlN_vk6dSglskv12okRVr5J8XyDA&callback=initMap"async defer>console.log('load api');</script>
   </body>
 </html>

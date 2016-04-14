@@ -5,6 +5,10 @@ $(document).ready(function(){
       $('html, body').animate({scrollTop : 0},800);
       return false;
    });
+   $('.clickAreaToBack').on("click",function(){
+      window.location.href = "../_main/index.html";
+      return false;
+   });
    
    $(window).scroll(function(){
       if ($(this).scrollTop() > 120) {
@@ -40,8 +44,7 @@ $(document).ready(function(){
 	},function(){
 		changeSVGColor('toTop','path','#01448f');
 	});
-  
-    
+
 });
 
 /*--------------------Change SVG image color of strokes---------------------*/

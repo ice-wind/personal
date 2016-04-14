@@ -3,17 +3,90 @@
 $(window).scroll(function() {
 	if ($(document).scrollTop()>80){
 		$('.navbar-container').addClass('shrink');
-		$('.hideMenu').addClass('menuwhite');
+		$('.changeColor').addClass('menuwhite');
 		$('#svgelem').fadeOut();
+		$('.icon-bar').css('background-color','grey');
+		$('.navbar-brand').find('img').css('opacity','1');
 	}else{
 		$('.navbar-container').removeClass('shrink');
-		$('.hideMenu').removeClass('menuwhite');
+		$('.changeColor').removeClass('menuwhite');
+		$('.icon-bar').css('background-color','antiquewhite');
 	}
 	
 	objectsFadeIn();
+	
+	if(scrollOn($('.progress'))){
+		$('.progress-bar-language').css('width','80%');
+	}
+	if(scrollOn($('.arrow_icon_footer'))){
+		$('.arrow_icon_footer').css('opacity','1');
+	}
 })
-/*----------------Fade in Menu---------------------------------------------------------------*/
+/*----------------Smooth scrolling on scroll spy---------------------------------------------------------------*/
+$(document).ready(function(){
+	$('body').scrollspy({target:'.scrollclass',offset:65});
+	// Add scrollspy to <body>
 
+	// Add smooth scrolling to all links inside a navbar
+	$("#myNavbar a").on('click', function(event){
+
+	  // Prevent default anchor click behavior
+	  event.preventDefault();
+
+	  // Store hash (#)
+	  var hash = this.hash;
+
+	  // Using jQuery's animate() method to add smooth page scroll
+	  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
+	  $('html, body').animate({
+		scrollTop: $(hash).offset().top
+	  }, 800, function(){
+
+		// Add hash (#) to URL when done scrolling (default click behavior)
+		window.location.hash = hash;
+	  });
+	});
+/*-------------------------------------Project  BOX anim------------------------------------------------*/
+	$('.box').hover(function(){
+		$(this).children('p').css('opacity','0');
+	},function(){
+		$(this).children('p').css('opacity','1');
+	});
+	
+	$('.box').hover(function(){
+
+		$(this).children('.titleHoverIn').addClass('titleScale');
+	},function(){
+		$(this).children('.titleHoverIn').removeClass('titleScale');
+	});
+/*--------------------------------------Scroll to top--------------------------------------------------*/
+	$('.arrow_icon_footer').on('click',function(){
+		 $("html, body").animate({ scrollTop: 0 }, "slow");
+	})
+/*--------------------------------------Menu hover animation-------------------------------------------*/
+	$('.navbar-toggle').hover(function(){
+		console.log('hit');
+		$('.icon-bar:first-child').stop().animate({top:"-=3px"},"fast");
+		$('.icon-bar:last-child').stop().animate({bottom:"-=3px"},"fast");
+	},function(){
+		$('.icon-bar:first-child').stop().animate({top:"+=3px"},"fast");
+		$('.icon-bar:last-child').stop().animate({bottom:"+=3px"},"fast");
+	});
+	
+});
+/*-------------------------------------SKILLS------------------------------------------------*/
+/*------------------------------------Progress bars------------------------------------------*/
+
+
+function scrollOn(element){
+var bottomOfObject = (element).outerHeight()+(element).offset().top;
+var bottomOfWindow = $(window).height() + $(window).scrollTop();
+if(bottomOfObject<bottomOfWindow){
+	return true;
+}else{
+	return false;
+}
+}
 
 /*---------------Fade in all object which have objectFadeIn class when scrolled on-----------*/
 function objectsFadeIn(){
@@ -23,7 +96,7 @@ function objectsFadeIn(){
 		var bottomOfWindow = $(window).height() + $(window).scrollTop();
 		
 		if(bottomOfObject<bottomOfWindow){
-			$(this).animate({'opacity':'1'},600);
+			$(this).animate({'opacity':'1','left':'0'},600);
 		}
 	});
 	
@@ -170,3 +243,13 @@ $(document).ready(function() {
   });
   
 });
+
+/*-------------------------------------INIT google map-------------------------------------------------*/
+	function initMap() {
+		console.log('google map:');
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+			  center: {lat: 48.1486, lng: 17.1077},
+			  zoom: 11
+			});
+		  }

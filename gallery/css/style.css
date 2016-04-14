@@ -142,6 +142,15 @@
 	z-index:3;
 	position:relative;
 }
+.clickAreaToBack{
+	top: 0px;
+	position: absolute;
+	width: 45px;
+	height: 25px;
+	opacity:0;
+	cursor:pointer;
+	z-index:3;
+}
 /*-----------------------ADDED CLASSES------------------*/
 .shiftToTop{
 	position:fixed;
