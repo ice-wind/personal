@@ -205,7 +205,7 @@ body {
 }
 .menuwhite{
 	background-color:white;
-	border-bottom:solid 1px white;
+	border-bottom:solid 1px #bababa;
 }
 .scrollclass{
 	padding-top:40px;
@@ -288,6 +288,11 @@ body {
 }
 .skills img{
 	width:300px;
+	height:auto;
+	position:relative;
+}
+.skills dt img{
+	width:32px;
 	height:auto;
 	position:relative;
 }
@@ -596,9 +601,17 @@ footer{
 	color:#0cafd2;
 }
 #map{
-	width:200px;
+	width:auto;
 	height:100px;
 }
+/*-------------------Extra footer blocks---------------*/
+.licence{
+	cursor:pointer;
+}
+#licence{
+	position:fixed;
+}
+
 /*---------------------------------------------------- */
 /* -------------------RESPONSIVE CSS-------------------*/
 /*---------------------------------------------------- */
