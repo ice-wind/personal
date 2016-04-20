@@ -110,7 +110,7 @@ body {
 
 /**---------------------SVG-------------------**/
 .arrow_icon_footer #bg_arrow_icon{
-	fill:rgb(54, 54, 54);
+	fill:#363636;
 }
 .main_arrow_icon {
 	position:relative;
@@ -154,18 +154,18 @@ body {
 }
 #redrect{
 	position:relative;
-	fill:black;
-	top:30;
+	fill:#000000;
+	top:30px;
 	left:50%;
 }
 #header_rectangle{
 	position:relative;
-	fill:black;
+	fill:#000000;
 }
 /*   line animation   */
 
 #left_line1,#right_line1,#left_line2,#right_line2{
-	stroke:white;
+	stroke:#ffffff;
 	stroke-width:2;
 	
 	-webkit-animation: myfirst 2s cubic-bezier(.49,.05,.32,1.04) infinite alternate;
@@ -175,15 +175,10 @@ body {
 #left_line2,#right_line2{
 	animation-delay: .5s;
 }
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-	0% {stroke:black;}
-    100%   {stroke:white;}
-}
 /* Standard syntax */
 @keyframes myfirst {
-	0% {stroke:black;}
-    100%   {stroke:white;}  
+	0% {stroke:#000000;}
+    100%   {stroke:#ffffff;}  
 }
 
 /*Shrink effect*/
@@ -195,7 +190,7 @@ body {
 	width:100%;
 	height:50px;
 	position:fixed;
-	background-color:black;
+	background-color:#000000;
 	z-index:10;
 	border-bottom:solid 1px #777;
 	
@@ -204,7 +199,7 @@ body {
     transition: all 0.7s ease;
 }
 .menuwhite{
-	background-color:white;
+	background-color:#ffffff;
 	border-bottom:solid 1px #bababa;
 }
 .scrollclass{
@@ -590,10 +585,12 @@ footer{
 	-webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+.footerCont ol,ul{
+	padding-left:10%;
+}
 .footerCont li{
 	padding:10px;
-	height:35px;
-	padding-left:20%;
+	height:42px;
 }
 .footerCont li:hover{
 	color:#0cafd2;
@@ -602,9 +599,15 @@ footer{
 .footerCont i:hover{
 	color:#0cafd2;
 }
+.footerCont .fa-envelope-o{
+	width:120px;
+}
 #map{
 	width:auto;
 	height:100px;
+}
+#secret_envelope:after{
+	content:'@gmail.com';
 }
 /*-------------------Extra footer blocks---------------*/
 .licence{

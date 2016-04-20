@@ -122,7 +122,7 @@ $('#contactForm').submit(function(e){
 					url:'php/contactForm.php',
 					data:$('#contactForm').serialize(),
 					success:function(response){
-						console.log(response);
+					
 						if(response.success==true){
 							$("#modalEmailSuccess").modal('show');
 							resetContactForm();
@@ -175,7 +175,6 @@ function contactFormValidate(){
 	var textPattern = /^[a-zA-Z0-9]$/;
 	var numberPattern = /^[0-9]$/;
 	
-	console.log (name);
 	if((name.length>20)||(name.length<=2)||(textPattern.test(name))){
 		$('.nameNote').removeClass('sr-only');
 		formValid = false;
@@ -199,6 +198,11 @@ function contactFormValidate(){
 		$('.telephoneNote').removeClass('sr-only');
 		formValid = false;
 		console.log('tel');
+	}
+	if((message.length>1000)||(textPattern.test(message))){
+		$('.messageNote').removeClass('sr-only');
+		formValid = false;
+		console.log('message');
 	}
 	return formValid;
 }
