@@ -7,10 +7,12 @@ $(window).scroll(function() {
 		$('#svgelem').fadeOut();
 		$('.icon-bar').css('background-color','grey');
 		$('.navbar-brand').find('img').css('opacity','1');
+		$('.navbar-brand').find('img').attr('src','img/RV_black.svg')
 	}else{
 		$('.navbar-container').removeClass('shrink');
 		$('.changeColor').removeClass('menuwhite');
 		$('.icon-bar').css('background-color','antiquewhite');
+		$('.navbar-brand').find('img').attr('src','img/RV_white_cut.svg')
 	}
 	
 	objectsFadeIn();

@@ -112,12 +112,23 @@ body {
 .arrow_icon_footer #bg_arrow_icon{
 	fill:#363636;
 }
+.main_brand_logo{
+	position: absolute;
+	text-align: center;
+	top: 40px;
+	left: 45%;
+	
+}
+.main_brand_logo img{
+	width: 130px;
+	height: auto;
+}
 .main_arrow_icon {
 	position:relative;
 	width: 43px;
 	height: 43px;
 	left: 50%;
-	top: 87%;
+	top: 85%;
 }
 .arrow_icon_footer{
 	position:relative;
