@@ -602,11 +602,14 @@ footer{
 .footerCont .fa-envelope-o{
 	width:120px;
 }
+.footerCont .fa-github span{
+	font-size:14px;
+}
 #map{
 	width:auto;
 	height:100px;
 }
-#secret_envelope:after{
+.secret_envelope:after{
 	content:'@gmail.com';
 }
 /*-------------------Extra footer blocks---------------*/
