@@ -76,8 +76,6 @@ $(document).ready(function(){
 	});
 	
 });
-/*-------------------------------------SKILLS------------------------------------------------*/
-/*------------------------------------Progress bars------------------------------------------*/
 
 
 function scrollOn(element){
@@ -103,7 +101,7 @@ function objectsFadeIn(){
 	});
 	
 }
-
+/*---------------             CONTACT FORMULAR            ---------------------------------------*/
 $('#contactForm').submit(function(e){
 	$('#contactForm button').prop('disabled', true);
 	$('#btnSendContact').button('loading');
@@ -236,7 +234,7 @@ $('#contactForm input').change(function(){
 		$($(this).parent()[0].nextElementSibling).removeClass('glyphicon-ok').addClass('glyphicon-warning-sign');
 	}
 });
-
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------DOCUMENT READY----------------------*/
 $(document).ready(function() {

@@ -34,6 +34,7 @@ body {
 	top:0px;
 	position:relative;
 	z-index:5;
+	text-align:center;
 	
 	-webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
@@ -116,8 +117,7 @@ body {
 	position: absolute;
 	text-align: center;
 	top: 40px;
-	left: 45%;
-	
+	width:100%;
 }
 .main_brand_logo img{
 	width: 130px;
@@ -127,7 +127,6 @@ body {
 	position:relative;
 	width: 43px;
 	height: 43px;
-	left: 50%;
 	top: 85%;
 }
 .arrow_icon_footer{
