@@ -1,18 +1,22 @@
-
 //Button to top
+var changeOnce=false;
 $(window).scroll(function() {
 	if ($(document).scrollTop()>80){
-		$('.navbar-container').addClass('shrink');
-		$('.changeColor').addClass('menuwhite');
-		$('#svgelem').fadeOut();
-		$('.icon-bar').css('background-color','grey');
-		$('.navbar-brand').find('img').css('opacity','1');
-		$('.navbar-brand').find('img').attr('src','img/RV_black.svg')
+		if(!changeOnce){
+			$('.navbar-container').addClass('shrink');
+			$('.changeColor').addClass('menuwhite');
+			$('#svgelem').fadeOut();
+			$('.icon-bar').css('background-color','grey');
+			$('.navbar-brand').find('img').css('opacity','1');
+			$('.navbar-brand').find('img').attr('src','img/RV_black.svg');
+			changeOnce=!changeOnce;
+		}
 	}else{
-		$('.navbar-container').removeClass('shrink');
-		$('.changeColor').removeClass('menuwhite');
-		$('.icon-bar').css('background-color','antiquewhite');
-		$('.navbar-brand').find('img').attr('src','img/RV_white_cut.svg')
+			$('.navbar-container').removeClass('shrink');
+			$('.changeColor').removeClass('menuwhite');
+			$('.icon-bar').css('background-color','antiquewhite');
+			$('.navbar-brand').find('img').attr('src','img/RV_white_cut.svg');
+			changeOnce=false;
 	}
 	
 	objectsFadeIn();
