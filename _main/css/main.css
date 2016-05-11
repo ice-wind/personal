@@ -410,9 +410,12 @@ body {
 	top:-30px;
 	opacity:0;
 }
-.titleHoverOff img{
-	width:75%;
-	height:75%;
+.titleHoverIn img{
+	width:65%;
+	height:60%;
+}
+.titleHoverOff p:nth-child(2){
+	padding: 40px 25px;
 }
 .titleHoverIn{
 	width:100%;
