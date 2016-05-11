@@ -24,9 +24,11 @@ body{
 	box-shadow: 0px 9px 56px -27px rgba(0,0,0,0.75);
 }
 #pers_image{
-	width: 90px;
+	width: 120px;
 	height: auto;
 	margin: 7px;
+	
+	border-left: solid 4px #31b0d5;
 }
 li{
 	list-style-type:none;
@@ -213,4 +215,8 @@ dd{
 	margin: auto;
 	border-bottom:1px solid black;
 
+}
+/*------------------------General settings----------------------------------*/
+ul{
+	padding-left:10px;
 }

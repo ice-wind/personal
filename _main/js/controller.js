@@ -7,12 +7,16 @@ $(window).scroll(function() {
 		$('#svgelem').fadeOut();
 		$('.icon-bar').css('background-color','grey');
 		$('.navbar-brand').find('img').css('opacity','1');
-		$('.navbar-brand').find('img').attr('src','img/RV_black.svg')
+		$('.navbar-brand').find('img').attr('src','img/RV_black.svg');
+		$('.main_brand_logo').stop(true,true).fadeTo(100, 0);
+		$('.main_arrow_icon').stop(true,true).fadeTo(100, 0);
 	}else{
 		$('.navbar-container').removeClass('shrink');
 		$('.changeColor').removeClass('menuwhite');
 		$('.icon-bar').css('background-color','antiquewhite');
-		$('.navbar-brand').find('img').attr('src','img/RV_white_cut.svg')
+		$('.navbar-brand').find('img').attr('src','img/RV_white_cut.svg');
+		$('.main_brand_logo').stop(true,true).delay(1000).animate({opacity:'1'},'slow');
+		$('.main_arrow_icon').stop(true,true).delay(500).animate({opacity:'1'},'slow');
 	}
 	
 	objectsFadeIn();
@@ -67,7 +71,6 @@ $(document).ready(function(){
 	})
 /*--------------------------------------Menu hover animation-------------------------------------------*/
 	$('.navbar-toggle').hover(function(){
-		console.log('hit');
 		$('.icon-bar:first-child').stop().animate({top:"-=3px"},"fast");
 		$('.icon-bar:last-child').stop().animate({bottom:"-=3px"},"fast");
 	},function(){
