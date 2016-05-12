@@ -1,5 +1,7 @@
 body{
-	background-color:#fff;
+	/*background-color:#fff;*/
+	background-image:url('../img/wood.png');
+	background-repeat:repeat;
 	margin:20px;
 }
 
@@ -70,9 +72,14 @@ li{
 	box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.6);
 }
 /*--------------Content----------------------------*/
+.container {
+	padding: 0px;
+	box-shadow: 0 1px 10px #0B0801;
+}
 .sub_header{
 	border-bottom:solid 2px #679cb9;
 	height:40px;
+	margin:30px;
 }
 .sub_header p{
 	padding-left:60px;
@@ -106,8 +113,20 @@ dl > dt:before{
 	color:#007ba5;
 	padding:5px;
 }
+dl > p {
+	padding-left:30px;
+}
 dd{
 	margin-left:35px;
+}
+.verticalMenu{
+	display:inline-block;
+	position:relative;
+	top:-15px;
+	
+}
+.secret_envelope::after {
+    content: '@gmail.com';
 }
 /*----------------------PROGRESS BAR-------------------------------------------*/
 .progress-bar-language{
@@ -119,8 +138,8 @@ dd{
 /*---------------------BOX section---------------------------------------------*/
 .box{
 	position:relative;
-	width:110px;
-	height:110px;
+	width:170px;
+	height:170px;
 	
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -196,8 +215,9 @@ dd{
 }
 .titleHoverIn span{
 	position:relative;
-	top:50%;
+	top:25%;
 }
+
 .titleScale{
 	-webkit-transform: scale3d(1, 1, 1);
 	transform: scale3d(1, 1, 1);
@@ -219,4 +239,29 @@ dd{
 /*------------------------General settings----------------------------------*/
 ul{
 	padding-left:10px;
+}
+/*---------------------------SHADOWS----------------------------------------*/
+.shadows
+{
+  position: relative;
+}
+.shadows:before, .shadows:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-1deg);
+}
+.shadows:after
+{
+  transform: rotate(1deg);
+  right: 10px;
+  left: auto;
 }

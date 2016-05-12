@@ -25,8 +25,10 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
 	if(scrollOn($('.progress'))){
-		$('.progress-bar-language').css('width','80%');
+		$('.progress-bar-language_sk').css('width','100%');
+		$('.progress-bar-language_eng').css('width','70%');
 	}
+
 })
 
 function scrollOn(element){

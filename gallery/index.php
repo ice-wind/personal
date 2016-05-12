@@ -10,7 +10,7 @@
 <body>
 	<section>
 	<div class="container"> 
-		<div class="mainTitle" ><img src='img/picture.svg'>   My photo gallery <br />
+		<div class="mainTitle" ><img src='img/color_gallery.png'>   My photo gallery <br />
 			<div class='lora secondTitle'>by RV</div>
 		</div>
 	</div>

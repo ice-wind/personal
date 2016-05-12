@@ -26,7 +26,21 @@ $(window).scroll(function() {
 	objectsFadeIn();
 	
 	if(scrollOn($('.progress'))){
-		$('.progress-bar-language').css('width','80%');
+		var C_progress = document.getElementById("progress-bar-language_C").getAttribute("data-progress");
+		var Csharp_progress = document.getElementById("progress-bar-language_Csharp").getAttribute("data-progress");
+		var HTML_progress = document.getElementById("progress-bar-language_HTML").getAttribute("data-progress");
+		var JS_progress = document.getElementById("progress-bar-language_JS").getAttribute("data-progress");
+		var JQUERY_progress = document.getElementById("progress-bar-language_JQUERY").getAttribute("data-progress");
+		var ANGULAR_progress = document.getElementById("progress-bar-language_ANGULAR").getAttribute("data-progress");
+		var PHP_progress = document.getElementById("progress-bar-language_PHP").getAttribute("data-progress");
+		
+		$('.progress-bar-language_C').css('width',C_progress);
+		$('.progress-bar-language_Csharp').css('width',Csharp_progress);		
+		$('.progress-bar-language_HTML').css('width',HTML_progress);
+		$('.progress-bar-language_JS').css('width',JS_progress);
+		$('.progress-bar-language_JQUERY').css('width',JQUERY_progress);
+		$('.progress-bar-language_ANGULAR').css('width',ANGULAR_progress);
+		$('.progress-bar-language_PHP').css('width',PHP_progress);
 	}
 	if(scrollOn($('.arrow_icon_footer'))){
 		$('.arrow_icon_footer').css('opacity','1');
