@@ -5,7 +5,7 @@
 <title>Bootstrap Image Gallery</title>
 <link rel="stylesheet" href="css/lightbox.min.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
 <body>
 	<section>
