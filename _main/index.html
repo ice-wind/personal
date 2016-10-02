@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Roman Varga personal page">
+    <meta name="author" content="Roman Varga">
+    <link rel="icon" href="../../favicon.ico">
+<!-- styles & scripts  -->
+    <script src="js/jquery.min.js"></script>
+    
+<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- font awesome -->
+	<link href='css/font-awesome.min.css' rel='stylesheet'>
+<!-- My style for this web -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <title>Personal site</title>
+	
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" >
+		
+    <div class="navbar-wrapper ">
+		<div class="navbar-container">
+		
+		<div id="loading_circle">
+			<div id="loader"></div>
+			<!-- <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>   -->
+		</div>
+		
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+			<symbol id="arrow" viewBox="0 0 43 43">
+			<g transform=" translate(21.5 0)">
+			<g transform="rotate(45)" >
+				<g id='bg_arrow_icon' >
+				 <rect  width="30" height="30"  />
+				</g>
+
+				 
+				<g stroke='white' stroke-width='2' >
+					 <g>
+					 <line  x1="5" y1="20" x2="20" y2="20"/>
+					 <line  x1="20" y1="5" x2="20" y2="20"/>
+					 <animate  attributeName="stroke" values="white; black; white" dur="2s" repeatCount="indefinite"  />
+					 </g>
+					 <g>
+					 <line  x1="5" y1="25" x2="25" y2="25"/>
+					 <line  x1="25" y1="5" x2="25" y2="25"/>
+					 <animate attributeName="stroke" values="white; black; white" dur="2s" repeatCount="indefinite"  begin="0.5s" />
+					 </g>
+				</g>
+			</g>
+			</g>
+			</symbol>
+		</svg>
+		
+		<div class='main_brand_logo'>
+			<img src='img/RVclear.jpg' alt='main_brand_logo'/>
+		</div>
+			<svg class="main_arrow_icon"><use xlink:href="#arrow" /></svg>
+			
+		</div>
+    </div>
+<!-- ____________________________________________Main menu	____________________________________________	-->
+	<div class='container changeColor'>
+		<nav class="navbar navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="#"><img src='img/RV_white.svg' alt='Brand Logo' /></a>
+			</div>
+			<div>
+			  <div class="collapse navbar-collapse navbar-right" id="myNavbar" >
+				<ul class="nav navbar-nav">
+				  <li><a  href="#introduction">Introduction</a></li>
+				  <li><a  href="#skills">Skills</a></li>
+				  <li><a  href="#experiences">Experiences</a></li>
+				  <li><a  href="#projects">Projects</a></li>
+				  <li><a  href="#interests">Interests</a></li>
+				  <li><a  href="#contact">Contact Me</a></li>
+				  
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</nav>    
+	</div>
+
+	<!-- ____________________________________________Introduction____________________________________________ -->
+	<div id='introduction' class='container spyScroll introduction '>
+		<div class='row '>
+			<h2 class='objectFadeIn'>Introduction</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-4 edges_vertical'>
+				<img src='img/personal_pic.jpg' alt='picture'/>
+			</div>
+			<div class='col-md-4 myStory edges_vertical edges_horizontal text-justify '>
+				<h4><strong>My story</strong></h4>
+				<em >Hello, welcome to my web site. I'm Roman Varga. Men who like programming, new technologies and simple nice design. This place describe me, my work/hobbies and thoughts. Now I'm situated in Bratislava, the capital city of Slovakia. I graduated at Slovak Technical University with degree in Applicable informatics. I'm interested in web technologies, IoT(arduino, raspberry Pi), and everything new. Thank you for visiting this site.</em>
+				<div class='more_about'><strong>Find more here </strong><a href='http://62.197.219.9/personal/_cv/index.html'><i class="fa fa-user fa-2x"></i></a></div>
+			</div>
+			<div class='col-md-4 edges_vertical edges_horizontal text-left'>
+				<h4><strong>Personal information:</strong></h4>
+				<ul class="text-justify">
+					<li><div class='border_box'><strong>Name</strong> <span>Ing. Roman Varga</span></div></li>
+					<li><div class='border_box'><strong>Age</strong> <span>29</span></div></li>
+					<li><div class='border_box'><strong>Skype</strong> <span>0910 579 485</span></div></li>
+					<li><div class='border_box'><strong>Email</strong> <span><div class='secret_envelope'>rv</div></span></div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- ____________________________________________Skills____________________________________________-->
+	<div id='skills' class='container spyScroll skills'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Skills</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-6 edges_vertical edges_horizontal text-center'>
+				<img src='img/ifograph_cv.png' alt='picture'/>
+			</div>
+			<div class='col-md-5 edges_vertical edges_horizontal text-left'>
+				<h4><strong>PC loremepsum</strong></h4>
+				<dl class="dl-horizontal progress_bars">
+				  <dt><img src= 'img/C.png' alt='C logo'/></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_C" class="progress-bar progress-bar-info progress-bar-language_C" data-progress="80%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+					  80%
+					  </div>
+					</div>
+				  </dd>
+				  <dt><img src= 'img/sharp.png' alt='C# logo'/></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_Csharp" class="progress-bar progress-bar-info progress-bar-language_Csharp" data-progress="50%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+					  50%
+					  </div>
+					</div>
+				  </dd>
+				   <dt><img src= 'img/html5-css3.png' alt='html_css logo' style='width:64px' /></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_HTML" class="progress-bar progress-bar-info progress-bar-language_HTML" data-progress="85%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+					  85%
+					  </div>
+					</div>
+				  </dd>
+				   <dt><img src= 'img/js.png' alt='JavaScript'/></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_JS" class="progress-bar progress-bar-info progress-bar-language_JS" data-progress="65%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+					  65%
+					  </div>
+					</div>
+				  </dd>
+				  <dt><img src= 'img/jquery.png' style="width:48px; padding-top:10px" alt='jquery logo'/></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_JQUERY" class="progress-bar progress-bar-info progress-bar-language_JQUERY" data-progress="50%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+					  50%
+					  </div>
+					</div>
+				  </dd>
+				  <dt><img src= 'img/angularjs.png' alt='AngularJS logo' /></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_ANGULAR" class="progress-bar progress-bar-info progress-bar-language_ANGULAR" data-progress="35%" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+					  35%
+					  </div>
+					</div>
+				  </dd>
+				  <dt><img src= 'img/php.png' alt='php logo'/></dt>
+				  <dd>
+					<div class="progress">
+					  <div id="progress-bar-language_PHP" class="progress-bar progress-bar-info progress-bar-language_PHP" data-progress="45%" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+					  45%
+					  </div>
+					</div>
+				  </dd>
+				</dl>
+			</div>		
+			<div class='col-md-offset-1'></div>
+		</div>
+	</div>
+	<!--<div class='skew_border'></div>   -->
+
+	<!-- ____________________________________________Experiences____________________________________________-->
+	
+	<div id='experiences' class='container spyScroll experiences'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Experiences</h2>
+		</div>
+		<div class='row'>
+			<div class='col-md-9 col-md-offset-3 edges_vertical text-center'>
+			
+				  <div class='row'>
+					<div class='col-md-5'>
+					  <h3><em>Samsung Electronics Slovakia:</em></h3>
+					  <h4 class='objectFadeIn'>1.9.2012 - now</h4>
+					</div>
+					<div class='col-md-3 col-md-offset-1'>
+					  <h4 class='objectFadeIn role'>Engineer</h4>
+					</div>
+				  </div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- ____________________________________________Projects____________________________________________-->
+	<div id='projects' class='container spyScroll projects'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Projects</h2>
+		</div>
+		<div class='row'>
+			<div class=' project_container col-md-5 col-md-offset-1 edges_vertical text-center'>
+				<div class="box"><div class='titleHoverOff'><a href='http://62.197.219.9/RPi/Forecast/'><p>FoRPi</p><p>Forecast Raspberry Pi project is focused on measure, collect and display meteo data. Dashboard is divided on to three sections. First deal with measured data(temperature, pressure, etc.) past days. Second and third section is focused on forecast data(external api)</p></a></div><div class='titleHoverIn'><p><img src='img/logo_forpi.svg' alt='FoRPi project'><p>Forecast Raspberry Pi</p></p></div></div>
+			</div>
+			<div class='project_container col-md-5  edges_vertical text-center'>
+				<div class="box"><div class='titleHoverOff'><a href='http://62.197.219.9:8080'><p>Domoticz</p><p>Implementation Domoticz project on my own home place. Domoticz is a lightweight Home Automation System</p></a></div><div class='titleHoverIn'><p><img src='img/domoticz.png' alt='Domoticz project'><p>Domoticz</p></p></div></div>
+			</div>
+			<div class='col-md-offset-1'></div>
+		</div>
+	</div>
+
+	<!-- ____________________________________________Interests____________________________________________ -->
+	<div id='interests' class='container spyScroll interests'>
+		<div class='row'>
+			<h2 class='objectFadeIn'>Interests</h2>
+		</div>
+		<div class='row'>
+			<div class=' gallery_container col-md-7 col-md-offset-2 edges_vertical text-center'>
+				<p>Gallery</p>
+
+					<!-- Carousel-->
+
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+						<li data-target="#myCarousel" data-slide-to="7"></li>
+						<li data-target="#myCarousel" data-slide-to="8"></li>
+						<li data-target="#myCarousel" data-slide-to="9"></li>
+					  </ol>
+					  <div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  <img class="first-slide" src="img/gallery/1.jpg" alt="First slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Amsterdam</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="second-slide" src="img/gallery/2.jpg" alt="Second slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Amsterdam</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="third-slide" src="img/gallery/3.jpg" alt="Third slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Danish seasida</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="fourth-slide" src="img/gallery/4.jpg" alt="Fourth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Danish bridge</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="fifth-slide" src="img/gallery/5.jpg" alt="Fifth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Stockholm</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="sixth-slide" src="img/gallery/6.jpg" alt="Sixth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Stockholm</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="seventh-slide" src="img/gallery/7.jpg" alt="Seventh slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Stockholm</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="eigth-slide" src="img/gallery/8.jpg" alt="Eigth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Sweden</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="nineth-slide" src="img/gallery/9.jpg" alt="Nineth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Sweden</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+						<div class="item">
+						  <img class="tenth-slide" src="img/gallery/10.jpg" alt="Tenth slide">
+						  <div class="container">
+							<div class="carousel-caption">
+							  <h1>Riga</h1>
+							  <p></p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
+					</div>
+					<!-- /.carousel -->
+			</div>
+			<div class='gallery_link col-md-3  edges_vertical text-center'>
+				<div class="gallery_link"><a href='http://62.197.219.9/personal/gallery/index.php'><img src='img/polygonal gallery.png' alt='gallery image' /></a></div>
+			</div>
+		</div>
+	</div>
+	
+<!-- ____________________________________________CONTACT Form____________________________________________-->
+	<div id='contact'></div>
+	<div class='contactForm spyScroll'>
+		<div class='row'>
+			<h2>Contact Me:</h2>
+		</div>
+		<div class='container myForm '>
+			<form class='form-horizontal' id='contactForm' action='php/contactForm.php' method='POST'>
+		
+				<div class="form-group has-feedback">
+				  <label class="control-label sr-only" for="inputGroupSuccess4_name">Input group with success</label>
+				  <div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-user"></span>
+					<input type="text" name='name' class="form-control imput imputName" id="inputGroupSuccess4_name" aria-describedby="inputGroupSuccess4_name" placeholder="Name*" pattern="[a-zA-Z0-9._-]{2,20}" title='Please use valid format! Just letters 2-20' required>
+				  </div>
+				  <span class="glyphicon form-control-feedback" ></span>
+				  <span  class="nameNote bg-danger sr-only">Name format error</span>
+				</div>
+				
+				<div class="form-group has-feedback">
+				  <label class="control-label sr-only" for="inputGroupSuccess4_email">Input group with success</label>
+				  <div class="input-group ">
+					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+					<input type="email" name='email' class="form-control imput imputEmail" id="inputGroupSuccess4_email" aria-describedby="inputGroupSuccess4_email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title='Please use valid email format! myEmail@example.com' required>
+				  </div>
+				  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+				  <span class=" emailNote bg-danger sr-only">Email format error</span>
+				</div>
+				
+				<div class="form-group has-feedback">
+				  <label class="control-label sr-only" for="inputGroupSuccess4_telephone">Input group with success</label>
+				  <div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-earphone"></span>
+					<input type="text" name='telephone' class="form-control imput imputTelephone" id="inputGroupSuccess4_telephone" aria-describedby="inputGroupSuccess4_telephone" placeholder="Telephone" pattern="[0-9+]{6,15}" title='ex. 00421 123 456'>
+				  </div>
+				  <span class="glyphicon  form-control-feedback" aria-hidden="true"></span>
+				  <span class="telephoneNote bg-danger sr-only">Telephone number format error</span>
+				</div>
+				
+				<div class="form-group has-feedback">
+				  <label class="control-label sr-only" for="inputGroupSuccess4_subject">Input group with success</label>
+				  <div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-flag"></span>
+					<input type="text" name='subject' class="form-control imput imputSubject" id="inputGroupSuccess4_subject" aria-describedby="inputGroupSuccess4_subject" placeholder="Subject" pattern="[^'\x22]+">
+				  </div>
+				  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+				  <span  class="subjectNote bg-danger sr-only">Subject format error</span>
+				</div>
+				<input type="text" name='contactUnlivingUsers' class="unlivingField" placeholder="beMy">
+				
+				<div class="form-group">
+				  <label class="control-label sr-only" for="inputGroupSuccess4_message">Input group with success</label>
+				  <div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-pencil"></span>
+					<textarea name='textarea' class="form-control imputMessage" rows="5"  id="inputGroupSuccess4_message" placeholder="Message" required></textarea>
+				  </div>
+				  <span class="glyphicon  form-control-feedback" aria-hidden="true"></span>
+				  <span  class="messageNote bg-danger sr-only">Message format error</span>
+				  <span  class="generalNote bg-danger sr-only">Specific error</span>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-sm-offset-2 col-sm-4">
+					  <button id="btnSendContact" type="submit" class="btn btn-primary"  data-loading-text="Loading...">Send</button>
+					  <button type="reset" class="btn btn-warning btnReset">Reset</button>
+					</div>
+				</div>
+				<p>*required</p>
+			</form>
+		</div>
+	 </div>
+	  
+	<div class='contactSpiner'><i class="fa fa-spinner fa-spin"></i></div>
+   <!-- ____________________________________________modal window for display status of email send, normally hide ____________________________________________ 	-->
+	<div id="modalEmailSuccess" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Email status:</h4>
+				</div>
+				<div class="modal-body">
+					<p>Your message was sent successfully!</p>
+					<p class="text-warning"><small>Thank you and best regards</small></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+<!-- FOOTER -->
+	<footer >
+	<div class="container-fluid ">
+		<div class="row text-center">
+			<svg class="arrow_icon_footer"><use xlink:href="#arrow" /></svg>
+		</div>
+		<div class="row footerHeader text-center">
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>About Me ...</strong></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>Any Questions?</strong></h4></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><h4><strong>Where you can find me</strong></h4></div>
+		</div>
+		<div class="row footerCont">
+		  <div class="col-md-4 col-lg-4 col-xs-4"><ul><li><div class="icons"><i class="fa fa-envelope-o"> <span class='secret_envelope'>rv</span></i></div ></li><li><div class="icons"><i class="fa fa-github fa-lg"> <span>ice-wind rep.</span></i></div></li><li><div class="icons"><i class="fa fa-home"> Slovakia</i></div></li></ul></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><ul><li class='FAQ' data-toggle="modal" data-target="#FAQ">1. FAQ </li><li class='share' data-toggle="modal" data-target="#share">2. Share </li><li class='licence' data-toggle="modal" data-target="#licence">3. Terms of use </li></ul></div>
+		  <div class="col-md-4 col-lg-4 col-xs-4"><div id="map"></div></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p>&copy; 2015 Company, Inc. &middot;</p>
+			</div>
+		</div>
+	</div>
+	</footer>
+
+	<!-- ____________________________________________Section for footer blocks____________________________________________-->
+	
+	
+	<div id='FAQ'  class="modal fade " tabindex="-1" role="dialog" aria-labelledby="FAQ">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel_faq">Share</h4>
+				</div>
+				<div class="modal-body">
+					<p>I'm still working on it ...</p>
+					<p>Compatible browsers: </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='share'  class="modal fade " tabindex="-1" role="dialog" aria-labelledby="share">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel_share">Share</h4>
+				</div>
+				<div class="modal-body">
+					<p>Press CTRL + D to bookmark this page.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='licence'  class="modal fade " tabindex="1" role="dialog" aria-labelledby="licence">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel_licence">License</h4>
+				</div>
+				<div class="modal-body">
+					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--  ____________________________________________ Load style  ____________________________________________  --!>
+	
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- ____________________________________________Bootstrap core JavaScript____________________________________________ -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/docs.min.js"></script>
+	<script src="js/controller.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSH1lUlN_vk6dSglskv12okRVr5J8XyDA&callback=initMap" async defer></script>
+  </body>
+</html>
