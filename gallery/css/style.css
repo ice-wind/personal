@@ -1,0 +1,202 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: Lora;
+    src: url('../fonts/Lora/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: Berkshire ;
+    src: url('../fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: LaBelleAurore ;
+    src: url('../fonts/La_Belle_Aurore/LaBelleAurore.ttf') format('truetype');
+}
+
+.container{
+	text-align:center;
+	height:50%;
+}
+.mainTitle{
+	font-size:56px;
+	font-family: LaBelleAurore;
+	color:#084d6e;
+	padding:40px;
+	background-image:url('../img/brush2.jpg');
+	background-repeat:no-repeat;
+	background-position: 80% 70%;
+}
+.mainTitle img{
+	width:110px;
+}
+.gallery_image{
+	padding:5px;
+}
+.secondTitle{
+	padding:40px;
+	margin-left:-190px;
+}
+.fa-camera-retro{
+	color:#013c5d;
+}
+.leftMenu{
+	border-right: 1px solid #99ddff;
+	position:fixed;
+	padding-right: 60px;
+	font-size: 20px;
+	color:#000;
+	top:330px;
+	
+	-webkit-transition-property: top;
+    -webkit-transition-duration: 1.5s; 
+}
+.leftMenuLine{
+	height:5px;
+	width:95%;
+	border-top:1px solid #99ddff;
+	position:relative;
+	padding-bottom:10px;
+	opacity:0;
+
+}
+.category{
+	font-size:19px;
+	color:#db5d00;
+	cursor:pointer;
+}
+.subCategory{
+	font-family: Lora;
+	text-decoration:underline;
+	margin-left:-40px;
+}
+.categorySection{
+	margin-top: 20px;
+}
+.categorySection::after{
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 1px;
+	background-color:#db5d00;
+	visibility: hidden;
+	
+	 -webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s; 
+}
+.categorySection:hover{
+	color:#db5d00;
+}
+.categorySection:hover:after{
+	visibility: visible;
+	color:#db5d00;
+	
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+.mainContainer{
+	position:relative;
+	margin-left: 260px;
+}
+
+/*--------------------BUTTON----------------------------*/
+.button{
+	border: 2px solid #01448f;
+	position: fixed;
+	width: 45px;
+	height: 25px;
+	text-align: center;
+	color: #0b2d54;
+	opacity: 0.4;
+	border-radius:5px;
+	cursor:pointer;
+	
+	transition: all 0.5s ease; 
+    -webkit-transition: all 0.5s ease; 
+}
+.button:hover{
+	background-color:#fc9e58;
+	border: 2px solid #fc9e58;
+	color:#fff;
+	opacity:1;
+}
+.btnToBack{
+	top:5px;
+	right:5px;
+}
+.btnToTop{
+	bottom: 5px;
+	right: 5px;
+	display:none;
+}
+.clickAreaToTop{
+	bottom: 30px;
+	position: absolute;
+	width: 45px;
+	height: 25px;
+	opacity:0;
+	cursor:pointer;
+	z-index:3;
+	position:relative;
+}
+.clickAreaToBack{
+	top: 0px;
+	position: absolute;
+	width: 45px;
+	height: 25px;
+	opacity:0;
+	cursor:pointer;
+	z-index:3;
+}
+/*-----------------------ADDED CLASSES------------------*/
+.shiftToTop{
+	position:fixed;
+	top:5%;
+}
+/*------------------------------------------------------*/
+
+body{
+	/*-------------PATTERN from http://subtlepatterns.com ----------------------
+	
+	background-image:url('../img/bright_squares.png');
+	background-repeat:repeat;
+	*/
+}
+hr{
+	color:#99ddff;
+}
+.lora{
+	font-family: Lora;
+	font-size:20px;
+}
+div>p{
+	margin-left:5%;
+	margin-bottom:0px;
+	text-align:left;
+	font-family: Lora;
+}
+.lightBlue{
+	color:#99ddff;
+}
+
+/*--------------------------------Media-CSS---------------------------*/
+
+@media (max-width: 360px) {
+	.leftMenu{
+		display:none;
+	}
+	.mainContainer{
+		margin-left:0px;
+	}
+	.subCategory{
+		margin-left:0px;
+	}
+}
+@media (max-width: 980px) {
+	.mainTitle{
+		background-position: 100% 50%;
+	}
+}
