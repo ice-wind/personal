@@ -44,12 +44,27 @@
 					$original_w = $original_info[0];
 					$original_h = $original_info[1];
 					
-					if($original_w!=$thumb_w){
-						$thumb_h = floor($original_h * ( $thumb_w/$original_w));
-						$virtual_image = imagecreatetruecolor($thumb_w, $thumb_h);
-						imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $thumb_w, $thumb_h, $original_w, $original_h);
+					$centerOfImage = calc_centerOfImage($original_w,$original_h);
+					$shortest_length = $centerOfImage[2];
+					
+					if($shortest_length!=$thumb_w){
+						$virtual_image = imagecreatetruecolor($thumb_w+10, $thumb_w+10);
+						imagecopyresampled($virtual_image, $source_image, 5, 5, $centerOfImage[0], $centerOfImage[1], $thumb_w, $thumb_w, $shortest_length, $shortest_length);
 						imagejpeg($virtual_image, $dest);
 					}
+				}
+				
+				function calc_centerOfImage($original_w,$original_h){
+					
+					$shorter_length = $original_w;
+					
+					if($original_w > $original_h)
+						$shorter_length = $original_h;
+					
+					
+					$original_center_x= ($original_w/2)-($shorter_length/2);
+					$original_center_y= ($original_h/2)-($shorter_length/2);
+					return [$original_center_x,$original_center_y,$shorter_length];
 				}
 				
 				function findPhoto($categories,$allowed_extensions){

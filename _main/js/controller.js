@@ -24,7 +24,7 @@ $(window).scroll(function() {
 	}
 	
 	objectsFadeIn();
-	
+	   
 	if(scrollOn($('.progress'))){
 		var C_progress = document.getElementById("progress-bar-language_C").getAttribute("data-progress");
 		var Csharp_progress = document.getElementById("progress-bar-language_Csharp").getAttribute("data-progress");
@@ -266,6 +266,18 @@ $(document).ready(function() {
       return false;
     }
   });
+  /*-----------------fade out loading image-------------*/
+  document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('loading_circle').style.display="none";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('loading_circle').style.display="none";
+      },1000);
+  }
+}
   
 });
 
