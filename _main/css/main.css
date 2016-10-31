@@ -158,8 +158,8 @@ body {
 .main_arrow_icon {
 	position:relative;
 	width: 43px;
-	height: 43px;
-	top: 94%;
+	height: 750px;
+	/**    top: 94%;   **/
 }
 .arrow_icon_footer{
 	position:relative;
